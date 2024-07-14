@@ -1,0 +1,111 @@
+*{
+    margin: 0%;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    background-color: rgb(31, 31, 31);
+    overflow: hidden;
+}
+#area{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(201, 5, 152, 0.895),rgba(15, 87, 242, 0.842));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+}
+#cars{
+    width: 70%;
+    position: absolute;
+    bottom: 0%;
+    transform: translate(-40px,0px);
+    z-index: 3;
+   
+}
+#bg{
+   width: 100%;
+   position: absolute;
+   filter: contrast(200%);
+   bottom: 0%;
+   height: 280px;
+   /* z-index: -1; */
+   background-image: url(./Pixar_Concept_Art-removebg-preview.png);
+}
+h1{
+    font-size: 8vmax;
+    text-align: center;
+    margin: 1%;
+    font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+    animation: animate 1s ease-in-out infinite alternate;
+}
+#txt{
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    text-align: center;
+    width: 80vw;
+    height: 30%;    
+    font-size: 2vmax;
+    margin-bottom: 16em;
+}
+#f1{
+  width: 5em;
+  position: absolute;
+  top:15%;
+  left:10%
+}
+#f2{
+    width: 4em;
+    position: absolute;
+    top:15%;
+    left:70%
+  }
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: rgb(253, 237, 237);
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle 4s infinite alternate;
+}
+
+@keyframes animate{
+    from{
+        text-shadow:  0 0 20px #ffe203;
+
+    }
+    to{
+        text-shadow: 0 0 30px #ffe203;
+        text-decoration: 0 0 10px #ffe203;
+    }
+}
+
+
+@keyframes sparkle {
+    50% {
+        opacity: 0.4;
+        transform: scale(0.5);
+        box-shadow: 0px 0px 10px 5px #fff ;
+   }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0px 0px 10px 5px white;
+   }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+        box-shadow: 0px 0px 10px 5px #fff ;
+   }
+}
